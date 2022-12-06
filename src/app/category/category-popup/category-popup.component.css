@@ -1,0 +1,19 @@
+mat-form-field{
+    width: 50%;
+    margin: auto;
+    
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    margin: 5px 15px;
+}
+
+a{
+    margin: 5px 15px;
+}
+

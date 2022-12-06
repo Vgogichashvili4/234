@@ -1,0 +1,22 @@
+<form class="example-form" [formGroup]="studentform" (ngSubmit)="Savestudent()">
+    <mat-card>
+    <mat-card-content>
+    
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Id</mat-label>
+        <input matInput formControlName="id" >
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Category</mat-label>
+          <input matInput  formControlName="categoryName" >
+        </mat-form-field>
+    
+
+</mat-card-content>
+    <mat-card-footer>
+    <div class="example-button-row buttons" style="margin: 2px">
+        <button type="submit" mat-raised-button color="primary">Save</button>  <a (click)="closepopup()" mat-raised-button color="accent">Close</a>
+    </div>
+</mat-card-footer>
+</mat-card>
+  </form>

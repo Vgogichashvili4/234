@@ -1,0 +1,62 @@
+{
+  "student": [
+    {
+      "id": 4,
+      "gmail": "kvaratskhelia@gmail.com",
+      "personalNumber": "7897",
+      "name": "98",
+      "lastName": "79",
+      "dateOfBirth": "345435",
+      "category": "football",
+      "isactive": true
+    },
+    {
+      "gmail": "uhj",
+      "personalNumber": "gjh",
+      "name": "g",
+      "lastName": "jh",
+      "dateOfBirth": "gkjdfg",
+      "category": "Medicine",
+      "isactive": true,
+      "id": 3
+    },
+    {
+      "gmail": "nikaFt@gmail.com",
+      "personalNumber": "7897",
+      "name": "98",
+      "lastName": "79",
+      "dateOfBirth": "345435",
+      "category": "football",
+      "isactive": true,
+      "id": 4
+    },
+    {
+      "id": 6,
+      "gmail": "nikaotk@gmail.com",
+      "personalNumber": "284729348729348",
+      "name": "Nika",
+      "lastName": "Otkhozoria",
+      "dateOfBirth": "11.06.2001",
+      "category": "architecture",
+      "isactive": false
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "categoryName": "football"
+    },
+    {
+      "categoryName": "architecture",
+      "id": 4
+    },
+    {
+      "categoryName": "Medicine",
+      "id": 5
+    },
+    {
+      "categoryName": "football",
+      "id": 7
+    }
+  ]
+}

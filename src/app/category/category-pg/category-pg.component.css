@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&family=Montserrat:wght@300;500&family=Roboto+Condensed:ital@1&display=swap');
+
+*{
+font-family: 'poppins', sans-serif!important;
+}
+
+.mat-elevation-z8{
+    width: 100%;
+}
+
+table{
+    width: 800px! important; 
+    margin-top: 1%;
+}
+
+h1{
+    font-weight: 900;
+    text-align: center;
+}
+
+td, th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+th{
+    font-weight:bold;
+    font-size: medium;
+}
+
+td{
+    font-weight: 500;
+}
+
+a{
+    font-weight: 500;
+}
+
+.mat-sort-header-container {
+    justify-content: center !important;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons a{
+    margin: 0 2%;
+    width: 12%;
+}
+
+@media only screen and (max-width:1300px){
+    table{
+        width: 800px! important; 
+    } 
+}
+
+
+
+@media only screen and (max-width:810px){
+    table{
+        width: 600px!important; 
+    }
+}
+
+
+@media only screen and (max-width:550px){
+    table{
+        width: 350px!important; 
+    }
+    a{
+       margin: 5px!important;
+    }
+}
+
+

@@ -1,0 +1,98 @@
+<section>
+  <h1 style="text-align: center;">All students </h1>
+
+<div class="mat-elevation-z8">
+    <div>
+        <!-- <a   (click)="createBtnClick()"   style="margin: 4% 0.5%">Create New</a> -->
+        <button (click)="createBtnClick()" class="btn btn1"  style="margin: 4% 0.5%">Create New</button>
+    </div>
+    <div class="search-bar">
+
+      <div class="input-container">
+        <input type="text" #input autocomplete="off" (keyup)="filterData($event)" required=""/>
+        <label>Search</label>		
+      </div>
+
+      <mat-form-field>
+        <mat-label>Categories</mat-label>
+        <mat-select  #selectedValue (selectionChange)="onChange($event)">
+          <mat-option (click)="clearValue()">All</mat-option>
+          <mat-option   *ngFor="let item of categories" [value]="item.categoryName">{{item.categoryName}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="sec-center"> 	
+        <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+        <label class="for-dropdown" for="dropdown">Dropdown Menu <i class="uil uil-arrow-down"></i></label>
+        <div class="section-dropdown"> 
+          <a *ngFor="let item of categories" [value]="item.categoryName" >Dropdown Link <i class="uil uil-arrow-right"></i></a>
+      </div>
+      </div>
+    </div>
+ 
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+     
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>
+          <td mat-cell *matCellDef="let element">{{element.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="gmail">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Gmail</th>
+            <td mat-cell *matCellDef="let element">{{element.gmail}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="personalNumber">
+            <th mat-header-cell *matHeaderCellDef>Personal Number</th>
+            <td mat-cell *matCellDef="let element">{{element.personalNumber}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name</th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef>Last Name</th>
+            <td mat-cell *matCellDef="let element">{{element.lastName}}</td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="dateOfBirth">
+            <th mat-header-cell *matHeaderCellDef>Date of Birth</th>
+            <td mat-cell *matCellDef="let element">{{element.dateOfBirth}}</td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef>Category</th>
+            <td mat-cell *matCellDef="let element">{{element.category}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="isactive">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <td mat-cell *matCellDef="let element">{{element.isactive}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action</th>
+            <td mat-cell *matCellDef="let element">
+                <div class="action-buttons">
+                    <button class="btn btn1"  routerLink="/update/{{element.id}}">Edit</button> 
+                    <button class="btn btn2"  (click)="Removestudent(element.id)" >Delete</button> 
+                </div>
+            </td>
+          </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+  
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+showFirstLastButtons
+aria-label="">
+</mat-paginator>
+</div>
+
+</section>
